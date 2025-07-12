@@ -126,7 +126,7 @@ gltfLoader.load(
 );
 
 //Floor Texture
-const floorAlphaMap = textureLoader.load("/public/assets/download (1).jpg");
+const floorAlphaMap = textureLoader.load("/public/assets/floor-alpha-map.jpg");
 const floorTexture = textureLoader.load(
   "/public/assets/floor/coast_sand_rocks_02_diff_1k.jpg"
 );
