@@ -101,13 +101,13 @@ gltfLoader.load(
   (gltf) => {
     // First ghost
     ghost1 = gltf.scene;
-    // ghost1.position.set(4, 0.5, 0);
+    ghost1.position.set(4, 0.5, 0);
     ghost1.scale.set(0.5, 0.5, 0.5);
     scene.add(ghost1);
 
     // Second ghost (clone)
     ghost2 = ghost1.clone(true);
-    // ghost2.position.set(-4, 0.5, 0);
+    ghost2.position.set(-4, 0.5, 0);
     ghost2.scale.set(0.5, 0.5, 0.5);
 
     scene.add(ghost2);
@@ -681,17 +681,19 @@ function animate() {
   ghost3Light.position.z = ghost3LightZ;
 
   //Update Ghost Position
-  ghost1.position.x = ghost1LightX;
-  ghost1.position.y = ghost1LightY;
-  ghost1.position.z = ghost1LightZ;
+  if (ghost1 && ghost2 && ghost3) {
+    ghost1.position.x += ghost1LightX;
+    ghost1.position.y += ghost1LightY;
+    ghost1.position.z += ghost1LightZ;
 
-  ghost2.position.x = ghost2LightX;
-  ghost2.position.y = ghost2LightY;
-  ghost2.position.z = ghost2LightZ;
+    ghost2.position.x += ghost2LightX;
+    ghost2.position.y += ghost2LightY;
+    ghost2.position.z += ghost2LightZ;
 
-  ghost3.position.x = ghost3LightX;
-  ghost3.position.y = ghost3LightY;
-  ghost3.position.z = ghost3LightZ;
+    ghost3.position.x += ghost3LightX;
+    ghost3.position.y += ghost3LightY;
+    ghost3.position.z += ghost3LightZ;
+  }
 
   const now = Date.now();
   if (now >= nextFlashTime) {
