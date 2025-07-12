@@ -87,8 +87,8 @@ const ghost3Light = new THREE.PointLight("#ff0000", 6);
 scene.add(ghost1Light, ghost2Light, ghost3Light);
 
 //Axis helper
-const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
+// const axesHelper = new THREE.AxesHelper(5);
+// scene.add(axesHelper);
 
 //Texture loader
 const textureLoader = new THREE.TextureLoader();
@@ -126,18 +126,18 @@ gltfLoader.load(
 );
 
 //Floor Texture
-const floorAlphaMap = textureLoader.load("/assests/download (1).jpg");
+const floorAlphaMap = textureLoader.load("/public/assests/download (1).jpg");
 const floorTexture = textureLoader.load(
-  "/assests/floor/coast_sand_rocks_02_diff_1k.jpg"
+  "/public/assests/floor/coast_sand_rocks_02_diff_1k.jpg"
 );
 const floorAoTexture = textureLoader.load(
-  "/assests/floor/coast_sand_rocks_02_arm_1k.jpg"
+  "/public/assests/floor/coast_sand_rocks_02_arm_1k.jpg"
 );
 const floorNormalTexture = textureLoader.load(
-  "/assests/floor/coast_sand_rocks_02_nor_gl_1k.jpg"
+  "/public/assests/floor/coast_sand_rocks_02_nor_gl_1k.jpg"
 );
 const floorDisplacementTexture = textureLoader.load(
-  "/assests/floor/coast_sand_rocks_02_disp_1k.jpg"
+  "/public/assests/floor/coast_sand_rocks_02_disp_1k.jpg"
 );
 
 floorTexture.colorSpace = THREE.SRGBColorSpace;
@@ -180,29 +180,29 @@ scene.add(floor);
 
 //Wall Texture
 const wallTexture = textureLoader.load(
-  "/assests/wall/castle_brick_broken_06_diff_1k.jpg"
+  "/public/assests/wall/castle_brick_broken_06_diff_1k.jpg"
 );
 const wallAoTexture = textureLoader.load(
-  "/assests/wall/castle_brick_broken_06_arm_1k.jpg"
+  "/public/assests/wall/castle_brick_broken_06_arm_1k.jpg"
 );
 const wallNormalTexture = textureLoader.load(
-  "/assests/wall/castle_brick_broken_06_nor_gl_1k.jpg"
+  "/public/assests/wall/castle_brick_broken_06_nor_gl_1k.jpg"
 );
 const wallDiplacementTexture = textureLoader.load(
-  "/assests/wall/castle_brick_broken_06_disp_1k.jpg"
+  "/public/assests/wall/castle_brick_broken_06_disp_1k.jpg"
 );
 
 wallTexture.colorSpace = THREE.SRGBColorSpace;
 
 //Roof Texture
 const roofTexture = textureLoader.load(
-  "/assests/roof/roof_tiles_14_diff_1k.jpg"
+  "/public/assests/roof/roof_tiles_14_diff_1k.jpg"
 );
 const roofAoTexture = textureLoader.load(
-  "/assests/roof/roof_tiles_14_arm_1k.jpg"
+  "/public/assests/roof/roof_tiles_14_arm_1k.jpg"
 );
 const roofNormalTexture = textureLoader.load(
-  "/assests/roof/roof_tiles_14_nor_gl_1k.jpg"
+  "/public/assests/roof/roof_tiles_14_nor_gl_1k.jpg"
 );
 
 roofTexture.colorSpace = THREE.SRGBColorSpace;
@@ -221,25 +221,25 @@ roofNormalTexture.wrapT = THREE.RepeatWrapping;
 
 //Window Texture
 const windowTexture = textureLoader.load(
-  "/assests/window/Wood_Window_001_basecolor.jpg"
+  "/public/assests/window/Wood_Window_001_basecolor.jpg"
 );
 const windowAoTexture = textureLoader.load(
-  "/assests/window/Wood_Window_001_ambientOcclusion.jpg"
+  "/public/assests/window/Wood_Window_001_ambientOcclusion.jpg"
 );
 const windowNormalTexture = textureLoader.load(
-  "/assests/window/Wood_Window_001_normal.jpg"
+  "/public/assests/window/Wood_Window_001_normal.jpg"
 );
 const windowRoughnessTexture = textureLoader.load(
-  "/assests/window/Wood_Window_001_roughness.jpg"
+  "/public/assests/window/Wood_Window_001_roughness.jpg"
 );
 const windowMetalTexture = textureLoader.load(
-  "/assests/window/Wood_Window_001_metallic.jpg"
+  "/public/assests/window/Wood_Window_001_metallic.jpg"
 );
 const windowalphaMap = textureLoader.load(
-  "/assests/window/Wood_Window_001_height.png"
+  "/public/assests/window/Wood_Window_001_height.png"
 );
 const windowOpacityTexture = textureLoader.load(
-  "/assests/window/Wood_Window_001_opacity.jpg"
+  "/public/assests/window/Wood_Window_001_opacity.jpg"
 );
 
 windowTexture.colorSpace = THREE.SRGBColorSpace;
@@ -321,25 +321,25 @@ House.add(centerWall);
 
 //Door Texture
 const doorTexture = textureLoader.load(
-  "/assests/door/Door_Wood_001_basecolor.jpg"
+  "/public/assests/door/Door_Wood_001_basecolor.jpg"
 );
 const doorAoTexture = textureLoader.load(
-  "/assests/door/Door_Wood_001_ambientOcclusion.jpg"
+  "/public/assests/door/Door_Wood_001_ambientOcclusion.jpg"
 );
 const doorRoughnessTexture = textureLoader.load(
-  "/assests/door/Door_Wood_001_roughness.jpg"
+  "/public/assests/door/Door_Wood_001_roughness.jpg"
 );
 const doorMetalnessTexture = textureLoader.load(
-  "/assests/door/Door_Wood_001_metallic.jpg"
+  "/public/assests/door/Door_Wood_001_metallic.jpg"
 );
 const doorNormalTexture = textureLoader.load(
-  "/assests/door/Door_Wood_001_normal.jpg"
+  "/public/assests/door/Door_Wood_001_normal.jpg"
 );
 const doorDisplacementTexture = textureLoader.load(
-  "/assests/door/Door_Wood_001_normal.jpg"
+  "/public/assests/door/Door_Wood_001_normal.jpg"
 );
 const doorAlphaMap = textureLoader.load(
-  "/assests/door/Door_Wood_001_opacity.jpg"
+  "/public/assests/door/Door_Wood_001_opacity.jpg"
 );
 
 doorTexture.colorSpace = THREE.SRGBColorSpace;
@@ -516,16 +516,16 @@ House.add(roofGroup);
 
 //Steps Texture
 const stepTexture = textureLoader.load(
-  "/assests/steps-textures/worn_tile_floor_diff_1k.jpg"
+  "/public/assests/steps-textures/worn_tile_floor_diff_1k.jpg"
 );
 const stepAoTexture = textureLoader.load(
-  "/assests/steps-textures/worn_tile_floor_arm_1k.jpg"
+  "/public/assests/steps-textures/worn_tile_floor_arm_1k.jpg"
 );
 const stepNormalTexture = textureLoader.load(
-  "/assests/steps-textures/worn_tile_floor_nor_gl_1k.jpg"
+  "/public/assests/steps-textures/worn_tile_floor_nor_gl_1k.jpg"
 );
 // const stepDisplacementTexture = textureLoader.load(
-//   "/assests/steps-textures/worn_tile_floor_nor_gl_1k.jpg"
+//   "/public/assests/steps-textures/worn_tile_floor_nor_gl_1k.jpg"
 // );
 
 stepTexture.colorSpace = THREE.SRGBColorSpace;
@@ -573,13 +573,13 @@ const graveGroup = new THREE.Group();
 
 //Grave Texture
 const graveTexture = textureLoader.load(
-  "/assests/grave/cracked_concrete_wall_diff_1k.jpg"
+  "/public/assests/grave/cracked_concrete_wall_diff_1k.jpg"
 );
 const graveAoTexture = textureLoader.load(
-  "/assests/grave/cracked_concrete_wall_arm_1k.jpg"
+  "/public/assests/grave/cracked_concrete_wall_arm_1k.jpg"
 );
 const graveNormalTexture = textureLoader.load(
-  "/assests/grave/cracked_concrete_wall_nor_gl_1k.jpg"
+  "/public/assests/grave/cracked_concrete_wall_nor_gl_1k.jpg"
 );
 
 //Grave
