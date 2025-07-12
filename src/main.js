@@ -682,17 +682,9 @@ function animate() {
 
   //Update Ghost Position
   if (ghost1 && ghost2 && ghost3) {
-    ghost1.position.x += ghost1LightX;
-    ghost1.position.y += ghost1LightY;
-    ghost1.position.z += ghost1LightZ;
-
-    ghost2.position.x += ghost2LightX;
-    ghost2.position.y += ghost2LightY;
-    ghost2.position.z += ghost2LightZ;
-
-    ghost3.position.x += ghost3LightX;
-    ghost3.position.y += ghost3LightY;
-    ghost3.position.z += ghost3LightZ;
+    ghost1.position.set(ghost1LightX, ghost1LightY, ghost1LightZ);
+    ghost2.position.set(ghost2LightX, ghost2LightY, ghost2LightZ);
+    ghost3.position.set(ghost3LightX, ghost3LightY, ghost3LightZ);
   }
 
   const now = Date.now();
